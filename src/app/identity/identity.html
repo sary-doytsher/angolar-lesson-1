@@ -1,0 +1,11 @@
+<p>identity works!</p>
+<div>
+    <h3>{{ person1.firstName }} {{ person1.lastName }}</h3>
+    <p>Birth Date: {{ person1.birthDate | date }}</p>
+    <p>Age: {{ age }} years</p>
+    <p>Number of Children: {{ person1.numberOfChildren }}</p>
+    <p>Is Israeli: {{ person1.isIsraeli ? 'Yes' : 'No' }}</p>
+    <img *ngIf="!imageHidden" [src]="person1.imgUrl" alt="">
+</div>
+<button class="toggle" (click)="toggleImage()">{{ toggleButtonText }}</button>
+<button class="calc" (click)="calculateAge(person1.birthDate)">חשב גיל</button>
